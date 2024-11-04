@@ -7,7 +7,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="./images/2.png" />
   <link rel="stylesheet" href="style.css">
+  <style>
+    #services {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .bg-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .bg-card {
+        padding: 20px;
+      }
+
+      .col-md-4 {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -17,7 +43,8 @@
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand text-white" href="#"><img class="icon-hover" width="100%" height="150px" src="./images/2.png" alt=""></a>
+      <a class="navbar-brand text-white" href="#"><img class="icon-hover" width="100%" height="150px"
+          src="./images/2.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="bg-white navbar-toggler-icon"></span>
@@ -45,26 +72,22 @@
   </nav>
   <!-- Nav Bar -->
 
-
   <!-- Home Section Starts -->
   <div class="">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h1 id="home" class="display-4 text-white">MERN STACK Developer</h1>
+          <h1 id="home" class="display-4 text-white">FRONT-END Developer</h1>
           <h1 class="mt-5 display-2 fw-bold text-white">Hi, I'm<p class="d-inline text-danger"> Meraj</p>
             From Pakistan</h1>
         </div>
         <div class="col-md-4">
-          <img class="rounded shadow" width="100%"
-            src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t1.6435-9/189801231_2703921049905348_4248176512832137846_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeF6Fp2j7m_ijWB-a4tmaHkM5YGIfbRWXOXlgYh9tFZc5Xp1sb-T8ZsBXMQ7WNW2K82O_VHtvNHP99TtI1sZ4flU&_nc_ohc=g6wNXYxJRTgAX9mfEhn&_nc_ht=scontent.fkhi16-1.fna&oh=00_AfCjeReGVOp3y-1yNNE0_JQIVukH_-uKKynIaKjOIkuhfQ&oe=64075BE6"
-            alt="">
+          <img class="rounded shadow" width="100%" src="./images/meraj-picture.jpg" alt="">
         </div>
       </div>
     </div>
   </div>
   <!-- Home Section Ends -->
-
 
   <!-- About Section Starts -->
   </div>
@@ -77,30 +100,40 @@
         </div>
         <div class="about-col-2">
           <h1 class="sub-title">About Me</h1>
-          <p>My name is Meraj Ali. My age is 19 and I am a basic video editor, Vlogger, Cinematographer and a
-            professional MERN-STACK Developer.</p>
+          <p>Highly motivated and skilled Front-End Developer with a proven track record of delivering exceptional web
+            applications. Proficient in HTML, CSS, React JS, JavaScript, and responsive design.</p>
           <div class="tab-titles">
             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
             <p class="tab-links" onclick="opentab('experience')">Experience</p>
             <p class="tab-links" onclick="opentab('education')">Education</p>
           </div>
+          <!-- Skill Tab -->
           <div class="tab-contents active-tab" id="skills">
             <ul>
-              <li><span>UI/UX</span><br>Designing Web Interfaces</li>
-              <li><span>Web Development</span><br>Web Development</li>
-              <li><span>App Development</span><br>Currently Learning App Development</li>
+              <li><span>Programing Languages</span><br>1. JavaScript ★★★☆☆ <br>2. PHP ★★☆☆☆</li>
+              <li><span>Front-End Technologies/Frameworks</span><br>1. HTML &amp; CSS ★★★★★ <br>2. Bootstrap ★★★★☆
+                <br>3. React JS ★★★☆☆
+              </li>
+              <li><span>Databases</span><br>1. MongoDB ★★☆☆☆ <br>2. MySQL ★★☆☆☆ <br> 3. Firebase ★★★★☆</li>
             </ul>
           </div>
+          <!-- Experience Tab -->
           <div class="tab-contents" id="experience">
             <ul>
-              <li><span>Freelancing</span><br>Working as a Freelancer</li>
+              <li><span>Freelancing</span><br>Worked as a Freelancer</li>
+              <li><span>Freelancing</span><br>Working as a Front-End Developer (Student Based Startup) at <a
+                  style="text-decoration: none;" href="https://techverzsolutions.com/">Techverz Solutions</a>, Karachi
+              </li>
             </ul>
           </div>
+          <!-- Education Tab -->
           <div class="tab-contents" id="education">
             <ul>
               <li><span>2020</span><br>Matriculation</li>
-              <li><span>2022</span><br>Intermediate</li>
-              <li><span>2022-Current</span><br>Graduation in Computer System Engineering</li>
+              <li><span>2022</span><br>Intermediate <br>"Completed my Intermediate with flying colors by achieving 85%"
+              </li>
+              <li><span>2022-Current</span><br>Graduation in Computer System Engineering <br>"Currently having CGPA
+                3.67/4"</li>
             </ul>
           </div>
         </div>
@@ -108,49 +141,51 @@
     </div>
   </div>
   <!-- About Section Ends -->
+
   <!-- Services Section Starts -->
   <div id="services">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <h1 class="text-white display-5 fw-bold">My Services</h1>
+          <p class="text-white fs-5">I offer a range of services to help you achieve the results you're after. Whether
+            you’re looking for a small tweak or a complete overhaul, I have you covered. Browse through my services
+            below to learn more about what I can do for you.</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 mt-5">
           <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
             <i class="fa-solid fs-1 fa-code bg-card pb-3 text-white"></i>
-            <h1 class="display-5 bg-card text-white">Web Design</h1>
-            <p class="bg-card text-white fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquam
-              quia, nobis sit eligendi explicabo
-              blanditiis laudantium</p>
-            <a class="bg-card text-white text-decoration-none fs-4" href="#">Learn more</a>
+            <h1 class="display-5 bg-card text-white">Web Development</h1>
+            <p class="bg-card text-white fs-5">With expertise in JavaScript, HTML & CSS, and PHP, I can build dynamic
+              and responsive websites tailored to your needs. Whether it's a simple landing page or a complex web
+              application, I've got you covered.</p>
           </div>
         </div>
         <div class="col-md-4 mt-5">
           <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
-            <i class="fa-solid fa-crop-simple bg-card pb-3 text-white fs-1"></i>
-            <h1 class="display-5 bg-card text-white">UI/UX Design</h1>
-            <p class="bg-card text-white fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquam
-              quia, nobis sit eligendi explicabo
-              blanditiis laudantium</p>
-            <a class="bg-card text-white text-decoration-none fs-4" href="#">Learn more</a>
+            <i class="fa-solid fa-plug bg-card pb-3 text-white fs-1"></i>
+            <h1 class="display-5 bg-card text-white">API Integration</h1>
+            <p class="bg-card text-white fs-5">I have experience in integrating various APIs into frontend applications
+              to enhance functionality and user experience. Whether it's RESTful APIs or GraphQL, I can seamlessly
+              connect your frontend with backend services.</p>
           </div>
         </div>
         <div class="col-md-4 mt-5">
           <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
             <i class="fa-solid fa-ribbon bg-card pb-3 text-white fs-1"></i>
-            <h1 class="display-5 bg-card text-white">Responsive</h1>
-            <p class="bg-card text-white fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquam
-              quia, nobis sit eligendi explicabo
-              blanditiis laudantium</p>
-            <a class="bg-card text-white text-decoration-none fs-4" href="#">Learn more</a>
+            <h1 class="display-5 bg-card text-white">Responsive Design</h1>
+            <p class="bg-card text-white fs-5">Ensuring your website looks great on all devices is crucial. With my
+              expertise in Bootstrap and responsive design techniques, I can make sure your site is fully optimized for
+              any screen size.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- Services Section Ends -->
+
   <!-- My Work Section Starts -->
   <div id="work">
     <div class="container">
@@ -183,6 +218,7 @@
     </div>
   </div>
   <!-- My Work Section Ends -->
+
   <!-- Contact Section Starts -->
   <div id="contact">
     <div class="container">
@@ -196,7 +232,7 @@
             href="#"> &nbsp;&nbsp;&nbsp;0315-8417553</a><br>
           <a target="_blank" href="https://www.facebook.com/profile.php?id=100008624371305"><i
               class="fa-brands text-danger fa-facebook icon-hover fs-1 mt-4"></i></a>
-          <a class="ms-2" target="_blank" href="https://www.instagram.com/mjmeraj10/"><i
+          <a class="ms-2" target="_blank" href="https://www.instagram.com/merajalyyy/"><i
               class="fa-brands fa-instagram icon-hover fs-1 mt-4 text-danger"></i></a>
           <a target="_blank" class="ms-2" href="mailto:merajali45425@gmail.com"><i
               class="fa-solid fa-envelope icon-hover fs-1 mt-4 text-danger"></i></a>
