@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="./images/2.png" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Services Section Styling */
+    #services {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    /* Card Styling */
+    .bg-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    /* Custom Toggler Icon Styling */
+    .custom-toggler .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    }
+
+    /* Custom Toggler Button Styling */
+    .custom-toggler.navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Navbar Toggler Styling */
+    .navbar-toggler {
+      padding: 0.25rem 0.75rem;
+      font-size: 1.25rem;
+      line-height: 1;
+      background-color: #343a40;
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+      transition: box-shadow 0.15s ease-in-out;
+    }
+
+    /* Navbar Toggler Hover Effect */
+    .navbar-toggler:hover {
+      background-color: #495057;
+    }
+
+    /* Navbar Toggler Focus Effect */
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    }
+
+    /* Project Card Styling */
+    .project-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+
+    /* Project Card Hover Effect */
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hover Card Styling */
+    .hover-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* Hover Card Hover Effect */
+    .hover-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Project Image Styling */
+    .project-image {
+      margin-bottom: 15px;
+    }
+
+    /* Responsive Styling for Smaller Devices */
+    @media (max-width: 768px) {
+      .display-5 {
+        font-size: 1.5rem;
+      }
+
+      .display-6 {
+        font-size: 1.25rem;
+      }
+
+      .fs-5 {
+        font-size: 1rem;
+      }
+
+      .fs-6 {
+        font-size: 0.875rem;
+      }
+
+      .ps-4,
+      .pe-4,
+      .pt-4,
+      .pb-4 {
+        padding: 1rem !important;
+      }
+    }
+
+    /* Additional Responsive Styling for Smaller Devices */
+    @media (max-width: 768px) {
+      .bg-card {
+        padding: 20px;
+      }
+
+      .col-md-4 {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#"><img class="icon-hover" width="100%" height="150px"
+          src="./images/2.png" alt=""></a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto fs-4">
+          <li class="nav-item">
+            <a class="text-white nav-link active ps-5 icon-hover" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link ps-5 icon-hover" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link ps-5 icon-hover" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link ps-5 icon-hover" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link ps-5 icon-hover" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Nav Bar -->
+
+  <!-- Home Section Starts -->
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 id="home" class="display-4 text-white">FRONT-END Developer</h1>
+          <h1 class="mt-5 display-2 fw-bold text-white">Hi, I'm<p class="d-inline text-danger"> Meraj</p>
+            From Pakistan</h1>
+        </div>
+        <div class="col-md-4">
+          <img class="rounded shadow" width="100%" src="./images/meraj-picture.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Home Section Ends -->
+
+  <!-- About Section Starts -->
+  </div>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img class="imgg" width="100%" src="./images/270103569_2857756721188446_3574800886581747985_n.jpg"
+            alt="user image">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Highly motivated and skilled Front-End Developer with a proven track record of delivering exceptional web
+            applications. Proficient in HTML, CSS, React JS, JavaScript, and responsive design.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <!-- Skill Tab -->
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Programing Languages</span><br>1. JavaScript ★★★☆☆ <br>2. PHP ★★☆☆☆</li>
+              <li><span>Front-End Technologies/Frameworks</span><br>1. HTML &amp; CSS ★★★★★ <br>2. Bootstrap ★★★★☆
+                <br>3. React JS ★★★☆☆
+              </li>
+              <li><span>Databases</span><br>1. MongoDB ★★☆☆☆ <br>2. MySQL ★★☆☆☆ <br> 3. Firebase ★★★★☆</li>
+            </ul>
+          </div>
+          <!-- Experience Tab -->
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Freelancing</span><br>Worked as a Freelancer</li>
+              <li><span>Freelancing</span><br>Working as a Front-End Developer (Student Based Startup) at <a
+                  style="text-decoration: none;" href="https://techverzsolutions.com/">Techverz Solutions</a>, Karachi
+              </li>
+            </ul>
+          </div>
+          <!-- Education Tab -->
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2020</span><br>Matriculation</li>
+              <li><span>2022</span><br>Intermediate <br>"Completed my Intermediate with flying colors by achieving 85%"
+              </li>
+              <li><span>2022-Current</span><br>Graduation in Computer System Engineering <br>"Currently having CGPA
+                3.67/4"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About Section Ends -->
+
+  <!-- Services Section Starts -->
+  <div id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 ">
+          <h1 class="text-white display-5 fw-bold">My Services</h1>
+          <p class="text-white fs-5">I offer a range of services to help you achieve the results you're after. Whether
+            you’re looking for a small tweak or a complete overhaul, I have you covered. Browse through my services
+            below to learn more about what I can do for you.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
+            <i class="fa-solid fs-1 fa-code bg-card pb-3 text-white"></i>
+            <h1 class="display-5 bg-card text-white">Web Development</h1>
+            <p class="bg-card text-white fs-5">With expertise in JavaScript, HTML & CSS, and PHP, I can build dynamic
+              and responsive websites tailored to your needs. Whether it's a simple landing page or a complex web
+              application, I've got you covered.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
+            <i class="fa-solid fa-plug bg-card pb-3 text-white fs-1"></i>
+            <h1 class="display-5 bg-card text-white">API Integration</h1>
+            <p class="bg-card text-white fs-5">I have experience in integrating various APIs into frontend applications
+              to enhance functionality and user experience. Whether it's RESTful APIs or GraphQL, I can seamlessly
+              connect your frontend with backend services.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
+            <i class="fa-solid fa-ribbon bg-card pb-3 text-white fs-1"></i>
+            <h1 class="display-5 bg-card text-white">Responsive Design</h1>
+            <p class="bg-card text-white fs-5">Ensuring your website looks great on all devices is crucial. With my
+              expertise in Bootstrap and responsive design techniques, I can make sure your site is fully optimized for
+              any screen size.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Services Section Ends -->
+
+  <!-- My Work Section Starts -->
+  <!-- <div id="work">
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-12 mt-5">
+          <h1 class="text-white display-5 fw-bold">My Work</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mt-5 ">
+          <a target="_blank" href="https://tubular-empanada-a42c46.netlify.app/"><img class="rounded hover-card"
+              width="100%" src="./images/work(2).jpg" alt=""></a>
+        </div>
+        <div class="col-md-4  mt-5">
+          <div class="link-hover">
+            <a target="_blank" href="https://stellular-raindrop-be4848.netlify.app/"><img class=" rounded hover-card"
+                width="100%" src="./images/work(1).jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-md-4 mt-5 ">
+          <a target="_blank" href="https://fmz-website-6d080.web.app/"><img class="rounded hover-card" width="100%"
+              height="82%" src="./images/pexels-michael-noel-4741693.jpg" alt=""></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center align-items-center">
+          <a href="#" type="submit" class="btn btn-outline-danger pe-5 ps-5 mt-3 mb-3">See more</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- My Work Section Ends -->
+
+  <!-- Projects Section Starts -->
+  <div id="projects">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mt-5">
+          <h1 class="text-white display-5 fw-bold">My Projects</h1>
+          <p class="text-white fs-5">Here are some of the projects I have worked on. Click on the links to view the
+            project repositories or live demos.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <a class="text-decoration-none" target="_blank" href="https://github.com/MerajAli1/Gluco-Guide-Front-End">
+            <div class="bg-card ps-4 pe-4 pt-4 pb-4 rounded hover-card project-card">
+              <img class="rounded hover-card project-image" width="100%" src="./images/gluco-guide-image.jpg"
+                alt="Gluco Guide">
+              <h1 style="background-color: #201f1f;" class="display-6 p-2 rounded text-white">Gluco Guide</h1>
+              <p class="bg-card text-white fs-5">An AI-powered application that predicts the probability of diabetes and
+                provides dietary
+                suggestions based on the user's risk level. Generates results based on user-entered data,
+                including systolic and diastolic values. Includes a secure authentication system
+                for personalized, confidential health insights.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <a class="text-decoration-none" target="_blank" href="https://github.com/hurairashaid/IncognetoConnect">
+            <div class="bg-card ps-4 pe-4 pt-4 pb-4 rounded hover-card project-card">
+              <img class="rounded hover-card project-image" width="100%" src="./images/Anonymous App.jpg"
+                alt="Anonymous App">
+              <h1 style="background-color: #201f1f;" class="display-6 p-2 rounded text-white">Anonymous App</h1>
+              <p class="bg-card text-white fs-5">IncognetoConnect is an innovative MERN application designed to
+                facilitate communication between university top office holders and students. It allows students to
+                create issues anonymously and upvote existing ones. An intermediate portal ensures only legitimate
+                issues are escalated to the office holders.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <a class="text-decoration-none" target="_blank" href="https://waheedbhutto.com/">
+            <div class="bg-card ps-4 pe-4 pt-4 pb-4 rounded hover-card project-card">
+              <img class="rounded hover-card project-image" width="100%" src="./images/Portfolio-web-pic.png"
+                alt="Portfolio Web">
+              <h1 style="background-color: #201f1f;" class="display-6 p-2 rounded text-white">Portfolio Web</h1>
+              <p class="bg-card text-white fs-5">I made a portfolio website for my university's Prof. Dr. Abdul Waheed
+                Bhutto, Pro Vice Chancellor. The website showcases his academic achievements, research work, and
+                contributions to the field of education. It features a clean and modern design, with sections dedicated
+                to his biography, publications, and ongoing projects.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="row">
+      <div class="col-md-12 d-flex justify-content-center align-items-center">
+        <a href="#" type="submit" class="btn btn-outline-danger pe-5 ps-5 mt-3 mb-3">See more</a>
+      </div>
+    </div> -->
+    </div>
+  </div>
+  <!-- Projects Section Ends -->
+
+
+  <!-- Contact Section Starts -->
+  <div id="contact">
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-4 mt-5">
+          <h1 class="display-5 fw-bold text-white">Contact Me</h1>
+          <i class="fa-sharp fa-solid fa-paper-plane text-danger fs-1 mt-4"></i><a
+            class="fs-5 text-white text-decoration-none mt-4" href="mailto:merajali45425@gmail.com"> &nbsp;&nbsp;
+            merajali45425@gmail.com</a><br>
+          <i class="fa-solid fa-phone text-danger fs-1 mt-4"></i><a class="fs-5 text-white text-decoration-none mt-4"
+            href="#"> &nbsp;&nbsp;&nbsp;0315-8417553</a><br>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100008624371305"><i
+              class="fa-brands text-danger fa-facebook icon-hover fs-1 mt-4"></i></a>
+          <a class="ms-2" target="_blank" href="https://www.instagram.com/merajalyyy/"><i
+              class="fa-brands fa-instagram icon-hover fs-1 mt-4 text-danger"></i></a>
+          <a target="_blank" class="ms-2" href="mailto:merajali45425@gmail.com"><i
+              class="fa-solid fa-envelope icon-hover fs-1 mt-4 text-danger"></i></a>
+          <a class="ms-2" target="_blank" href="https://github.com/MerajAli1"><i
+              class="fa-brands fa-github icon-hover fs-1 mt-4 text-danger"></i></a>
+        </div>
+        <div class="col-md-8 mt-5">
+          <form action="">
+            <input placeholder="Enter your name" type="text" name="" id=""><br>
+            <input class="mt-4" placeholder="Enter your name" type="text" name="" id=""><br>
+            <textarea class="mt-4" placeholder="Enter your message..." name="" id="" cols="30" rows="10"></textarea><br>
+            <button class="btn btn-danger mt-3 fs-4 pe-5 ps-5 mb-5">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact Section Ends -->
+  <!-- Footer Section Starts -->
+  <footer class="bg-dark text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3 bg-card">
+      <p class="text-white d-inline bg-card"><span class="text-danger bg-card fs-4"> © </span> Copyright:</p>
+      <a class="text-white bg-card" target="_blank" href="mailto:merajali45425@gmail.com">Made by Meraj Ali</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer Section Ends -->
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
