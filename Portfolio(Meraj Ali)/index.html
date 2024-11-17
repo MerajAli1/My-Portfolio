@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" href="./images/2.png" />
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Services Section Styling */
     #services {
       display: flex;
       flex-direction: column;
@@ -17,6 +18,7 @@
       min-height: 100vh;
     }
 
+    /* Card Styling */
     .bg-card {
       display: flex;
       flex-direction: column;
@@ -24,6 +26,92 @@
       height: 100%;
     }
 
+    /* Custom Toggler Icon Styling */
+    .custom-toggler .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    }
+
+    /* Custom Toggler Button Styling */
+    .custom-toggler.navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Navbar Toggler Styling */
+    .navbar-toggler {
+      padding: 0.25rem 0.75rem;
+      font-size: 1.25rem;
+      line-height: 1;
+      background-color: #343a40;
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+      transition: box-shadow 0.15s ease-in-out;
+    }
+
+    /* Navbar Toggler Hover Effect */
+    .navbar-toggler:hover {
+      background-color: #495057;
+    }
+
+    /* Navbar Toggler Focus Effect */
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    }
+
+    /* Project Card Styling */
+    .project-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+
+    /* Project Card Hover Effect */
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hover Card Styling */
+    .hover-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* Hover Card Hover Effect */
+    .hover-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Project Image Styling */
+    .project-image {
+      margin-bottom: 15px;
+    }
+
+    /* Responsive Styling for Smaller Devices */
+    @media (max-width: 768px) {
+      .display-5 {
+        font-size: 1.5rem;
+      }
+
+      .display-6 {
+        font-size: 1.25rem;
+      }
+
+      .fs-5 {
+        font-size: 1rem;
+      }
+
+      .fs-6 {
+        font-size: 0.875rem;
+      }
+
+      .ps-4,
+      .pe-4,
+      .pt-4,
+      .pb-4 {
+        padding: 1rem !important;
+      }
+    }
+
+    /* Additional Responsive Styling for Smaller Devices */
     @media (max-width: 768px) {
       .bg-card {
         padding: 20px;
@@ -45,9 +133,9 @@
     <div class="container">
       <a class="navbar-brand text-white" href="#"><img class="icon-hover" width="100%" height="150px"
           src="./images/2.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="bg-white navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto fs-4">
@@ -61,7 +149,7 @@
             <a class="text-white nav-link ps-5 icon-hover" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="text-white nav-link ps-5 icon-hover" href="#work">Portfolio</a>
+            <a class="text-white nav-link ps-5 icon-hover" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
             <a class="text-white nav-link ps-5 icon-hover" href="#contact">Contact</a>
@@ -146,7 +234,7 @@
   <div id="services">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 ">
           <h1 class="text-white display-5 fw-bold">My Services</h1>
           <p class="text-white fs-5">I offer a range of services to help you achieve the results you're after. Whether
             you’re looking for a small tweak or a complete overhaul, I have you covered. Browse through my services
@@ -154,7 +242,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 mt-5">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
           <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
             <i class="fa-solid fs-1 fa-code bg-card pb-3 text-white"></i>
             <h1 class="display-5 bg-card text-white">Web Development</h1>
@@ -163,7 +251,7 @@
               application, I've got you covered.</p>
           </div>
         </div>
-        <div class="col-md-4 mt-5">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
           <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
             <i class="fa-solid fa-plug bg-card pb-3 text-white fs-1"></i>
             <h1 class="display-5 bg-card text-white">API Integration</h1>
@@ -172,7 +260,7 @@
               connect your frontend with backend services.</p>
           </div>
         </div>
-        <div class="col-md-4 mt-5">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
           <div class="bg-card ps-5 pe-5 pt-5 pb-5 rounded hover-card">
             <i class="fa-solid fa-ribbon bg-card pb-3 text-white fs-1"></i>
             <h1 class="display-5 bg-card text-white">Responsive Design</h1>
@@ -187,7 +275,7 @@
   <!-- Services Section Ends -->
 
   <!-- My Work Section Starts -->
-  <div id="work">
+  <!-- <div id="work">
     <div class="container">
       <div class="row ">
         <div class="col-md-12 mt-5">
@@ -216,14 +304,76 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- My Work Section Ends -->
+
+  <!-- Projects Section Starts -->
+  <div id="projects">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mt-5">
+          <h1 class="text-white display-5 fw-bold">My Projects</h1>
+          <p class="text-white fs-5">Here are some of the projects I have worked on. Click on the links to view the
+            project repositories or live demos.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <a class="text-decoration-none" target="_blank" href="https://github.com/MerajAli1/Gluco-Guide-Front-End">
+            <div class="bg-card ps-4 pe-4 pt-4 pb-4 rounded hover-card project-card">
+              <img class="rounded hover-card project-image" width="100%" src="./images/gluco-guide-image.jpg"
+                alt="Gluco Guide">
+              <h1 style="background-color: #201f1f;" class="display-6 p-2 rounded text-white">Gluco Guide</h1>
+              <p class="bg-card text-white fs-5">An AI-powered application that predicts the probability of diabetes and
+                provides dietary
+                suggestions based on the user's risk level. Generates results based on user-entered data,
+                including systolic and diastolic values. Includes a secure authentication system
+                for personalized, confidential health insights.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <a class="text-decoration-none" target="_blank" href="https://github.com/hurairashaid/IncognetoConnect">
+            <div class="bg-card ps-4 pe-4 pt-4 pb-4 rounded hover-card project-card">
+              <img class="rounded hover-card project-image" width="100%" src="./images/Anonymous App.jpg"
+                alt="Anonymous App">
+              <h1 style="background-color: #201f1f;" class="display-6 p-2 rounded text-white">Anonymous App</h1>
+              <p class="bg-card text-white fs-5">IncognetoConnect is an innovative MERN application designed to
+                facilitate communication between university top office holders and students. It allows students to
+                create issues anonymously and upvote existing ones. An intermediate portal ensures only legitimate
+                issues are escalated to the office holders.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <a class="text-decoration-none" target="_blank" href="https://waheedbhutto.com/">
+            <div class="bg-card ps-4 pe-4 pt-4 pb-4 rounded hover-card project-card">
+              <img class="rounded hover-card project-image" width="100%" src="./images/Portfolio-web-pic.png"
+                alt="Portfolio Web">
+              <h1 style="background-color: #201f1f;" class="display-6 p-2 rounded text-white">Portfolio Web</h1>
+              <p class="bg-card text-white fs-5">I made a portfolio website for my university's Prof. Dr. Abdul Waheed
+                Bhutto, Pro Vice Chancellor. The website showcases his academic achievements, research work, and
+                contributions to the field of education. It features a clean and modern design, with sections dedicated
+                to his biography, publications, and ongoing projects.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="row">
+      <div class="col-md-12 d-flex justify-content-center align-items-center">
+        <a href="#" type="submit" class="btn btn-outline-danger pe-5 ps-5 mt-3 mb-3">See more</a>
+      </div>
+    </div> -->
+    </div>
+  </div>
+  <!-- Projects Section Ends -->
+
 
   <!-- Contact Section Starts -->
   <div id="contact">
-    <div class="container">
+    <div class="container ">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 mt-5">
           <h1 class="display-5 fw-bold text-white">Contact Me</h1>
           <i class="fa-sharp fa-solid fa-paper-plane text-danger fs-1 mt-4"></i><a
             class="fs-5 text-white text-decoration-none mt-4" href="mailto:merajali45425@gmail.com"> &nbsp;&nbsp;
